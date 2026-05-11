@@ -44,11 +44,11 @@ copyright:
 sidebar: left
 # Widgets displaying in sidebar
 widgets:
+- recent_posts
 - category
 - tag
 - tagcloud
 - archive
-- recent_posts
 
 # ===============
 # Widget behavior

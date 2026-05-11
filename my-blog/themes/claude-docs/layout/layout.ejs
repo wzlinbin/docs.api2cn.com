@@ -6,8 +6,11 @@
     <div id="wrap">
       <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
       <div class="outer doc-shell">
+        <% if (theme.sidebar === 'left'){ %>
+          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+        <% } %>
         <section id="main"><%- body %></section>
-        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+        <% if (theme.sidebar && theme.sidebar !== 'bottom' && theme.sidebar !== 'left'){ %>
           <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
         <% } %>
       </div>
