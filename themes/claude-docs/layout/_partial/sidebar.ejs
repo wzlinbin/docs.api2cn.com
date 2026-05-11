@@ -1,0 +1,11 @@
+<aside id="sidebar"<% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
+  <div class="sidebar-brand">
+    <a class="sidebar-brand-title" href="<%- url_for() %>"><%= config.title %></a>
+    <% if (config.subtitle){ %>
+      <div class="sidebar-brand-subtitle"><%= config.subtitle %></div>
+    <% } %>
+  </div>
+  <% theme.widgets.forEach(function(widget){ %>
+    <%- partial('_widget/' + widget) %>
+  <% }) %>
+</aside>

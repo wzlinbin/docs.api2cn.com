@@ -1,0 +1,62 @@
+// Config
+support-for-ie = false
+vendor-prefixes = webkit moz ms official
+
+// Colors
+color-default = #2c261f
+color-grey = #756e64
+color-border = #ded7ca
+color-link = #c85f3d
+color-background = #f7f4ec
+color-sidebar-text = #5f574d
+color-widget-background = #faf8f1
+color-widget-border = #ded7ca
+color-footer-background = #171512
+color-mobile-nav-background = #191919
+color-twitter = #00aced
+color-facebook = #3b5998
+color-pinterest = #cb2027
+color-linkedin = #0077B5
+
+// Fonts
+font-sans = -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif
+font-serif = "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, "Times New Roman", serif
+font-mono = "Source Code Pro", "JetBrains Mono", Consolas, Monaco, Menlo, monospace
+font-icon = ForkAwesome
+font-size = 16px
+line-height = 1.75em
+line-height-title = 1.25em
+
+// Header
+logo-size = 40px
+subtitle-size = 16px
+banner-height = 76px
+banner-url = hexo-config("banner")
+
+sidebar = hexo-config("sidebar")
+
+// Layout
+block-margin = 32px
+article-padding = 32px
+mobile-nav-width = 280px
+main-column = 9
+sidebar-column = 3
+
+if sidebar and sidebar isnt bottom
+  _sidebar-column = sidebar-column
+else
+  _sidebar-column = 0
+
+// Grids
+column-width = 80px
+gutter-width = 20px
+columns = main-column + _sidebar-column
+
+// Media queries
+mq-mobile = "screen and (max-width: 479px)"
+mq-tablet = "screen and (min-width: 480px) and (max-width: 767px)"
+mq-normal = "screen and (min-width: 768px)"
