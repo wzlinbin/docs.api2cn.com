@@ -17,17 +17,25 @@ body:before
   z-index: 10
   background: linear-gradient(90deg, #d97706, #2563eb, #059669)
 
+#container
+  min-height: 100%
+
 #wrap
+  height: auto
   min-height: 100%
   position: relative
   background: transparent
 
 .outer
-  max-width: 1180px
+  max-width: 1160px
   padding: 0 28px
   box-sizing: border-box
   @media mq-mobile
     padding: 0 18px
+
+.doc-shell
+  padding-top: 34px
+  padding-bottom: 34px
 
 #header
   height: banner-height
@@ -135,39 +143,45 @@ $doc-nav-link
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12)
 
 if sidebar and sidebar isnt bottom
-  .outer
+  .doc-shell
     @media mq-normal
       display: grid
-      grid-template-columns: minmax(0, 1fr) 260px
-      gap: 36px
+      grid-template-columns: 220px minmax(0, 820px)
+      justify-content: center
+      gap: 34px
       align-items: start
 
-  #main
+  .doc-shell #main
     @media mq-normal
+      display: block
       float: none
       width: auto
+      margin: 0
+      min-width: 0
 
-  #sidebar
+  .doc-shell #sidebar
     @media mq-normal
+      display: block
       float: none
       width: auto
+      margin: 0
       position: sticky
       top: 100px
 
 if sidebar is left
-  .outer
+  .doc-shell
     @media mq-normal
-      grid-template-columns: 260px minmax(0, 1fr)
-  #main
+      grid-template-columns: 220px minmax(0, 820px)
+  .doc-shell #main
     @media mq-normal
       grid-column: 2
-  #sidebar
+  .doc-shell #sidebar
     @media mq-normal
       grid-column: 1
       grid-row: 1
 
 .article
-  margin: 34px 0
+  margin: 0 0 30px
 
 .article-inner
   background: #fff
@@ -323,7 +337,7 @@ if sidebar is left
   text-transform: none
 
 .widget-wrap
-  margin: 24px 0
+  margin: 0 0 24px
 
 .widget-title
   color: #111827
@@ -379,6 +393,9 @@ if sidebar is left
 #footer a
   color: #93c5fd
 
+#mobile-nav
+  display: none
+
 .article-entry
   pre,
   .highlight
@@ -395,6 +412,8 @@ if sidebar is left
     background: transparent
 
 @media mq-mobile
+  #mobile-nav
+    display: block
   #header
     height: auto
     min-height: 68px
