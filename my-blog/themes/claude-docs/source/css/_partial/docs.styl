@@ -1,0 +1,425 @@
+html
+  scroll-behavior: smooth
+
+body
+  color: color-default
+  background:
+    linear-gradient(180deg, #fff 0, #f6f8fb 420px)
+  font: font-size font-sans
+
+body:before
+  content: ""
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  height: 3px
+  z-index: 10
+  background: linear-gradient(90deg, #d97706, #2563eb, #059669)
+
+#wrap
+  min-height: 100%
+  position: relative
+  background: transparent
+
+.outer
+  max-width: 1180px
+  padding: 0 28px
+  box-sizing: border-box
+  @media mq-mobile
+    padding: 0 18px
+
+#header
+  height: banner-height
+  background: rgba(255, 255, 255, 0.94)
+  border-bottom: 1px solid color-border
+  position: sticky
+  top: 0
+  z-index: 5
+  backdrop-filter: blur(14px)
+  &:before,
+  &:after
+    display: none
+
+#banner
+  display: none
+
+#header-outer
+  height: 100%
+
+#header-inner
+#header-title
+  width: auto
+  float: none
+  overflow: visible
+
+#header-title
+  position: static
+  height: auto
+  margin: 0
+  text-align: left
+
+#header-outer
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 24px
+
+#header-inner
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  flex: 1
+
+#logo-wrap
+#subtitle-wrap
+  margin: 0
+
+#logo
+  color: #111827
+  font-size: 22px
+  line-height: 1
+  font-weight: 700
+  letter-spacing: 0
+  text-shadow: none
+
+#subtitle
+  display: block
+  color: color-grey
+  font-size: 13px
+  line-height: 1.4
+  margin-top: 6px
+  letter-spacing: 0
+  text-shadow: none
+
+#main-nav
+#sub-nav
+  float: none
+  margin: 0
+  display: flex
+  align-items: center
+  gap: 4px
+
+$doc-nav-link
+  color: #374151
+  display: inline-flex
+  align-items: center
+  min-height: 36px
+  padding: 0 12px
+  border-radius: 7px
+  text-decoration: none
+  text-shadow: none
+  font-weight: 600
+  letter-spacing: 0
+  opacity: 1
+  transition: background 0.15s, color 0.15s
+  &:hover
+    background: #eef2f7
+    color: #111827
+
+.main-nav-link
+.nav-icon
+  @extend $doc-nav-link
+
+.nav-icon
+  width: 36px
+  justify-content: center
+  padding: 0
+
+#search-form-wrap
+  top: 21px
+
+.search-form
+  border: 1px solid color-border
+  border-radius: 8px
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12)
+
+if sidebar and sidebar isnt bottom
+  .outer
+    @media mq-normal
+      display: grid
+      grid-template-columns: minmax(0, 1fr) 260px
+      gap: 36px
+      align-items: start
+
+  #main
+    @media mq-normal
+      float: none
+      width: auto
+
+  #sidebar
+    @media mq-normal
+      float: none
+      width: auto
+      position: sticky
+      top: 100px
+
+if sidebar is left
+  .outer
+    @media mq-normal
+      grid-template-columns: 260px minmax(0, 1fr)
+  #main
+    @media mq-normal
+      grid-column: 2
+  #sidebar
+    @media mq-normal
+      grid-column: 1
+      grid-row: 1
+
+.article
+  margin: 34px 0
+
+.article-inner
+  background: #fff
+  border: 1px solid color-border
+  border-radius: 8px
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06)
+  overflow: hidden
+
+.article-meta
+  display: flex
+  align-items: center
+  gap: 10px
+  padding: 0 article-padding
+  color: color-grey
+  font-size: 13px
+
+.article-date
+.article-category-link
+  color: color-grey
+  text-transform: none
+  letter-spacing: 0
+  text-shadow: none
+  margin: 0
+  font-weight: 500
+
+.article-category
+  color: color-grey
+  margin: 0
+  text-shadow: none
+  &:before
+    color: #c7ced8
+    margin-right: 10px
+
+.article-header
+  padding: 34px article-padding 4px
+
+.article-title
+  color: #111827
+  font-size: 2.25em
+  line-height: 1.18
+  letter-spacing: 0
+  font-weight: 750
+  a&:hover
+    color: color-link
+  @media mq-mobile
+    font-size: 1.8em
+
+.article-entry
+  color: #24292f
+  padding: 8px article-padding article-padding
+  font-size: 16px
+  line-height: 1.78
+  word-break: break-word
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    color: #111827
+    letter-spacing: 0
+    scroll-margin-top: 110px
+  h1
+    font-size: 2em
+    margin: 1.45em 0 0.6em
+  h2
+    font-size: 1.55em
+    padding-top: 1.35em
+    margin: 1.35em 0 0.65em
+    border-top: 1px solid color-border
+  h3
+    font-size: 1.25em
+    margin: 1.25em 0 0.45em
+  p,
+  table
+    line-height: 1.78
+  a
+    color: color-link
+    text-decoration: none
+    border-bottom: 1px solid rgba(37, 99, 235, 0.25)
+    &:hover
+      border-bottom-color: color-link
+  blockquote
+    margin: 1.25em 0
+    padding: 14px 18px
+    border-left: 4px solid #d97706
+    background: #fff7ed
+    color: #4b5563
+    text-align: left
+    font-family: font-sans
+  table
+    display: block
+    overflow-x: auto
+    border: 1px solid color-border
+    border-radius: 8px
+  th,
+  td
+    padding: 10px 14px
+    border-bottom: 1px solid color-border
+  th
+    background: #f9fafb
+    border-bottom: 1px solid color-border
+  img,
+  video
+    border-radius: 8px
+    border: 1px solid color-border
+
+.article-more-link a
+  border-radius: 7px
+  background: #111827
+  color: #fff
+  text-shadow: none
+  font-weight: 600
+  padding: 8px 13px
+  &:hover
+    background: color-link
+
+.article-footer
+  border-top: 1px solid color-border
+  margin: 0 article-padding article-padding
+  color: color-grey
+
+.article-share-link
+  display: none
+
+.article-tag-list-link
+  color: #374151
+  background: #eef2f7
+  border-radius: 999px
+  padding: 3px 9px
+  &:before
+    color: color-grey
+
+#article-nav
+  margin: 26px 0
+  &:before
+    display: none
+
+.article-nav-link-wrap
+  color: #4b5563
+  background: #fff
+  border: 1px solid color-border
+  border-radius: 8px
+  padding: 16px
+  text-shadow: none
+  &:hover
+    border-color: #b7c2d2
+    color: #111827
+
+.article-nav-caption
+  color: color-grey
+  letter-spacing: 0
+  text-transform: none
+
+.widget-wrap
+  margin: 24px 0
+
+.widget-title
+  color: #111827
+  font-size: 13px
+  text-transform: none
+  letter-spacing: 0
+  margin: 0 0 10px
+  text-shadow: none
+
+.widget
+  color: color-sidebar-text
+  background: transparent
+  border: 0
+  border-left: 1px solid color-border
+  border-radius: 0
+  box-shadow: none
+  padding: 0 0 0 16px
+  text-shadow: none
+  a
+    color: #4b5563
+    display: inline-block
+    padding: 3px 0
+    text-decoration: none
+    &:hover
+      color: color-link
+      text-decoration: none
+
+.category-list-count
+.tag-list-count
+.archive-list-count
+  color: #9ca3af
+
+.tagcloud a
+  background: #eef2f7
+  border-radius: 999px
+  color: #374151
+  margin: 4px 5px 4px 0
+  padding: 2px 9px
+
+.archive-article
+  background: #fff
+  border: 1px solid color-border
+  border-radius: 8px
+  padding: 16px 18px
+
+#footer
+  margin-top: 54px
+  background: #111827
+  border-top: 0
+  padding: 28px 0
+  color: #cbd5e1
+
+#footer a
+  color: #93c5fd
+
+.article-entry
+  pre,
+  .highlight
+    border-radius: 8px
+    border: 1px solid #243044
+    margin: 1.25em 0
+  code
+    border-radius: 4px
+    background: #eef2f7
+    color: #111827
+    text-shadow: none
+  pre code
+    color: inherit
+    background: transparent
+
+@media mq-mobile
+  #header
+    height: auto
+    min-height: 68px
+  #header-outer
+    align-items: flex-start
+    flex-direction: column
+    gap: 14px
+    padding-top: 18px
+    padding-bottom: 14px
+  #header-inner
+    width: 100%
+    justify-content: space-between
+  #main-nav
+    flex-wrap: wrap
+  .article-inner
+    border-radius: 0
+    margin-left: -18px
+    margin-right: -18px
+    border-left: 0
+    border-right: 0
+  .article-header
+  .article-entry
+  .article-meta
+    padding-left: 20px
+    padding-right: 20px
+  .article-footer
+    margin-left: 20px
+    margin-right: 20px
