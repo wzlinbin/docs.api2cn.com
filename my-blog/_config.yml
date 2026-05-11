@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 智慧 API 文档
+subtitle: OpenAI-compatible Gateway
+description: 智慧 API 文档与使用指南
 keywords:
-author: John Doe
-language: en
+author: api2cn
+language: zh-CN
 timezone: ''
 
 # URL

@@ -412,6 +412,213 @@ if sidebar is left
     color: inherit
     background: transparent
 
+// Claude-style warm documentation surface.
+body
+  background:
+    radial-gradient(circle at 20% 0, rgba(224, 104, 67, 0.08), transparent 30%),
+    linear-gradient(180deg, #fbfaf4 0, #f6f1e8 100%)
+  color: #2b261f
+  font-family: font-sans
+
+body:before
+  background: linear-gradient(90deg, #e46e4a, #d9a35f, #8f7f62)
+
+#header
+  background: rgba(251, 249, 242, 0.82)
+  border-bottom: 1px solid rgba(91, 76, 57, 0.12)
+
+#logo
+  color: #1e1a15
+  font-family: font-serif
+  font-size: 22px
+  font-weight: 650
+  &:before
+    content: ""
+    display: inline-block
+    width: 14px
+    height: 14px
+    margin-right: 10px
+    border: 2px solid #dd6f4e
+    border-radius: 999px
+    vertical-align: -1px
+
+#subtitle
+  color: #8a8174
+
+$doc-nav-link
+  color: #4f463c
+  &:hover
+    background: #f0e8da
+    color: #1f1b16
+
+.doc-shell
+  max-width: 1220px
+  padding-top: 22px
+
+if sidebar and sidebar isnt bottom
+  .doc-shell
+    @media mq-normal
+      grid-template-columns: 260px minmax(0, 760px)
+      gap: 34px
+
+#sidebar
+  background: rgba(250, 248, 241, 0.92)
+  border: 1px solid #ddd4c5
+  border-radius: 22px
+  box-shadow: 0 18px 50px rgba(69, 55, 38, 0.09)
+  padding: 22px 20px
+  box-sizing: border-box
+
+.sidebar-brand
+  padding: 8px 8px 18px
+  margin-bottom: 18px
+  border-bottom: 1px solid rgba(91, 76, 57, 0.12)
+
+.sidebar-brand-title
+  display: flex
+  align-items: center
+  color: #2a241d
+  font-family: font-serif
+  font-size: 21px
+  line-height: 1.25
+  text-decoration: none
+  &:before
+    content: ""
+    width: 14px
+    height: 14px
+    margin-right: 10px
+    border: 2px solid #dd6f4e
+    border-radius: 999px
+
+.sidebar-brand-subtitle
+  color: #8a8174
+  font-size: 12px
+  line-height: 1.4
+  margin-top: 8px
+
+.widget-wrap
+  margin: 0 0 12px
+
+.widget-title
+  color: #8a8174
+  font-size: 11px
+  font-weight: 700
+  margin: 16px 8px 6px
+  text-transform: uppercase
+  letter-spacing: 0.04em
+
+.widget
+  border-left: 0
+  padding: 0
+  a
+    color: #5b5349
+    display: block
+    border-radius: 10px
+    padding: 8px 10px
+    line-height: 1.35
+    &:hover
+      background: #efe7d8
+      color: #1f1b16
+
+.tagcloud a
+  display: inline-block
+  background: #efe7d8
+  color: #6a5f53
+  border-radius: 999px
+  padding: 5px 10px
+
+.article-inner
+  background: rgba(252, 250, 244, 0.96)
+  border: 1px solid #ddd4c5
+  border-radius: 22px
+  box-shadow: 0 24px 70px rgba(69, 55, 38, 0.10)
+  overflow: hidden
+
+.article-header
+  padding: 42px 40px 10px
+
+.article-title
+  color: #17130f
+  font-family: font-serif
+  font-size: 2.95em
+  font-weight: 520
+  letter-spacing: 0
+  line-height: 1.05
+
+.article-meta
+  padding: 0 40px 18px
+  color: #8a8174
+
+.article-entry
+  color: #332d25
+  font-size: 17px
+  line-height: 1.86
+  padding: 18px 40px 44px
+  h1,
+  h2,
+  h3
+    color: #17130f
+    font-family: font-serif
+    font-weight: 520
+  h2
+    border-top: 1px solid #e5ded2
+    font-size: 2.2em
+    margin-top: 1.55em
+  h3
+    font-size: 1.5em
+  a
+    color: #c45e3f
+    border-bottom-color: rgba(196, 94, 63, 0.28)
+  code
+    background: #efe6d7
+    color: #c45e3f
+    border-radius: 7px
+    padding: 0.14em 0.38em
+  blockquote
+    background: #f2eee4
+    border: 1px solid #e2d9ca
+    border-left: 4px solid #dd6f4e
+    border-radius: 12px
+    color: #5a5146
+  table
+    background: #fffdf7
+    border-color: #e2d9ca
+  th
+    background: #f3ede2
+
+.article-entry pre,
+.article-entry .highlight
+  background: #1b1a17
+  border: 1px solid #34302a
+  border-radius: 16px
+  color: #f4efe5
+  margin: 1.35em 0
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04)
+
+.article-entry pre code
+  color: #f4efe5
+  background: transparent
+
+.article-footer
+  border-top: 1px solid #e5ded2
+  margin: 0 40px 34px
+
+.article-tag-list-link
+  background: #efe7d8
+  color: #6a5f53
+
+#article-nav
+  margin: 28px 0
+
+.article-nav-link-wrap
+  background: #fbf9f2
+  border-color: #ddd4c5
+  border-radius: 16px
+
+#footer
+  background: #171512
+  color: #d6cec0
+
 @media mq-mobile
   #mobile-nav
     display: block
@@ -443,3 +650,13 @@ if sidebar is left
   .article-footer
     margin-left: 20px
     margin-right: 20px
+  #sidebar
+    border-radius: 16px
+    margin-bottom: 18px
+  .article-title
+    font-size: 2.1em
+  .article-header
+  .article-entry
+  .article-meta
+    padding-left: 22px
+    padding-right: 22px
