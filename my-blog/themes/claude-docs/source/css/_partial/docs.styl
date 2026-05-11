@@ -588,16 +588,62 @@ if sidebar and sidebar isnt bottom
 
 .article-entry pre,
 .article-entry .highlight
-  background: #1b1a17
-  border: 1px solid #34302a
-  border-radius: 16px
-  color: #f4efe5
-  margin: 1.35em 0
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04)
+  background: #f1eadc
+  border: 1px solid #ded2bf
+  border-radius: 14px
+  color: #302820
+  margin: 1.2em 0
+  box-shadow: none
+  overflow-x: auto
+
+.article-entry pre
+  padding: 16px 18px
 
 .article-entry pre code
-  color: #f4efe5
+  color: #302820
   background: transparent
+  padding: 0
+
+.article-entry .highlight
+  padding: 16px 18px
+  table
+    display: table
+    width: auto
+    margin: 0
+    border: 0
+    border-radius: 0
+    background: transparent
+    overflow: visible
+  tr,
+  td
+    border: 0
+    padding: 0
+    background: transparent
+  pre
+    margin: 0
+    padding: 0
+    border: 0
+    background: transparent
+    color: #302820
+    overflow: visible
+  .gutter
+    display: none
+  .code
+    padding: 0
+  .line
+    height: auto
+    min-height: 1.7em
+
+.article-entry .highlight .built_in,
+.article-entry .highlight .keyword,
+.article-entry .highlight .literal
+  color: #b45c3d
+
+.article-entry .highlight .string
+  color: #7a6a4d
+
+.article-entry .highlight .comment
+  color: #928779
 
 .article-footer
   border-top: 1px solid #e5ded2
