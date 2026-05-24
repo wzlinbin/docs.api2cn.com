@@ -16,7 +16,7 @@ tags:
 三、导入本站Claude分组配置
    
 1、请登录网站后，在API密钥页面，在“Claude Max号池组” 对应行，点击导入到CCS
-   ![n3PEcZ9WwwPI106h2527dZLiLmQ5Hemn.webp](https://cdn.nodeimage.com/i/n3PEcZ9WwwPI106h2527dZLiLmQ5Hemn.webp)
+   ![iNqHgJRNzMUOXWLV1wZL8XYag94e1607.webp](https://cdn.nodeimage.com/i/iNqHgJRNzMUOXWLV1wZL8XYag94e1607.webp)
 
 2、先按默认设置导入
 ![DN3143CEmu5mzOqTDyLjFy6Odi4d7VSt.webp](https://cdn.nodeimage.com/i/DN3143CEmu5mzOqTDyLjFy6Odi4d7VSt.webp)
@@ -28,7 +28,8 @@ tags:
 ![D9Ko5AzlAuhOfT1GblScRdeNjMagUh1p.webp](https://cdn.nodeimage.com/i/D9Ko5AzlAuhOfT1GblScRdeNjMagUh1p.webp)
 
 5、点击获取模型列表，根据你的需求，选择gpt5.5或者5.4后保存！
-![D9Ko5AzlAuhOfT1GblScRdeNjMagUh1p.webp](https://cdn.nodeimage.com/i/D9Ko5AzlAuhOfT1GblScRdeNjMagUh1p.webp)
+
+![n3PEcZ9WwwPI106h2527dZLiLmQ5Hemn.webp](https://cdn.nodeimage.com/i/n3PEcZ9WwwPI106h2527dZLiLmQ5Hemn.webp)
 
 6、重新打开vscode 即可在claude code 插件中使用gpt模型！
 
